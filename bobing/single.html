@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SINGLE</title>
+    <link href="css/T1.css" rel="stylesheet">
+    
+    <style>
+        #bg{
+            border-width:0px;
+            position:absolute;
+            left:175px;
+            top:10px;
+            width:1140px;
+            height:700px;
+        }
+
+        #blow{
+            border-width:0px;
+            position:absolute;
+            left:520px;
+            top:100px;
+            width:450px;
+            height:400px;
+        }
+
+        #login_back{
+            border-width:0px;
+            position:absolute;
+            left:200px;
+            top:30px;
+            display:flex;
+            position:absolute;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #back{
+            width:80px;
+            height:35px;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:20px;
+            background-color:rgb(230, 218, 59);
+        }
+
+        #set{
+            border-width:0px;
+            position:absolute;
+            left:1240px;
+            top:30px;
+        }
+
+        #rule{
+            border-width:0px;
+            position:absolute;
+            left:1245px;
+            top:95px;
+        }
+
+        #divthrow{
+            border-width:0px;
+            position:absolute;
+            left:640px;
+            top:600px;
+            display:flex;
+            position:absolute;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #throw{
+            width:200px;
+            height:35px;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:20px;
+            background-color:rgb(230, 218, 59);
+        }
+
+        #resultevery{
+            position:absolute;
+            left:200px;
+            top:150px;
+            width:280px;
+            height:540px;
+            display:flex;
+            position:absolute;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+            background-color:rgb(231, 229, 229);
+        }
+
+        #resultyour{
+            position:absolute;
+            left:1015px;
+            top:150px;
+            width:280px;
+            height:320px;
+            display:flex;
+            position:absolute;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+            background-color:rgb(231, 229, 229);
+        }
+
+        #resultremind{
+            position:absolute;
+            left:1015px;
+            top:490px;
+            width:280px;
+            height:200px;
+            display:flex;
+            position:absolute;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+            background-color:rgb(231, 229, 229);
+        }
+
+        #result{
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:400;
+            font-style:normal;
+            font-size:15px;
+            color:black;
+            line-height: 20px;
+            text-align:left;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="bg" src="file:///C:/Users/LSY/Desktop/bobing/1.png">
+
+    <img id="blow" src="file:///C:/Users/LSY/Desktop/bobing/src=http___img.alicdn.com_i4_1719257283_O1CN01jMtY4j23ffAiCjgcW_!!1719257283.jpg&refer=http___img.alicdn.png">
+
+    
+    <div id="divthrow">
+       <button id="throw">THROWING</button>
+    </div>
+
+    <div id="resultevery">
+        <p id="result" class="view1"></p>
+    </div>
+
+    <div id="resultyour">
+        <p id="result" class="view2"></p>
+    </div>
+
+    <div id="resultremind">
+        <p id="result" class="view3"></p>
+     </div>
+
+    <div id="login_back">
+        <a href="file:///E:/lsyvscode/bobing/startpage.html">
+            <button type="button" id="back">Back</button>
+        </a>
+    </div>
+
+    <a href="file:///E:/lsyvscode/bobing/setting.html">
+        <svg id="set" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+            <circle cx="12" cy="12" r="3" />
+        </svg>
+    </a>
+
+    <a href="file:///E:/lsyvscode/bobing/rule.html">
+        <svg id="rule" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+            <line x1="3" y1="6" x2="3" y2="19" />
+            <line x1="12" y1="6" x2="12" y2="19" />
+            <line x1="21" y1="6" x2="21" y2="19" />
+          </svg>
+    </a>
+
+    <div class="dice1">
+        <div class="face">
+            <div class="item1"></div>
+        </div>
+        <div class="face">
+            <div class="item2"></div>
+            <div class="item2"></div>
+        </div>
+        <div class="face">
+            <div class="item3"></div>
+            <div class="item3"></div>
+            <div class="item3"></div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dice2">
+        <div class="face">
+            <div class="item1"></div>
+        </div>
+        <div class="face">
+            <div class="item2"></div>
+            <div class="item2"></div>
+        </div>
+        <div class="face">
+            <div class="item3"></div>
+            <div class="item3"></div>
+            <div class="item3"></div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dice3">
+        <div class="face">
+            <div class="item1"></div>
+        </div>
+        <div class="face">
+            <div class="item2"></div>
+            <div class="item2"></div>
+        </div>
+        <div class="face">
+            <div class="item3"></div>
+            <div class="item3"></div>
+            <div class="item3"></div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dice4">
+        <div class="face">
+            <div class="item1"></div>
+        </div>
+        <div class="face">
+            <div class="item2"></div>
+            <div class="item2"></div>
+        </div>
+        <div class="face">
+            <div class="item3"></div>
+            <div class="item3"></div>
+            <div class="item3"></div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dice5">
+        <div class="face">
+            <div class="item1"></div>
+        </div>
+        <div class="face">
+            <div class="item2"></div>
+            <div class="item2"></div>
+        </div>
+        <div class="face">
+            <div class="item3"></div>
+            <div class="item3"></div>
+            <div class="item3"></div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dice6">
+        <div class="face">
+            <div class="item1"></div>
+        </div>
+        <div class="face">
+            <div class="item2"></div>
+            <div class="item2"></div>
+        </div>
+        <div class="face">
+            <div class="item3"></div>
+            <div class="item3"></div>
+            <div class="item3"></div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+            <div class="face_0">
+                <div class="item4"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+            </div>
+            <div class="face_0">
+                <div class="item5"></div>
+                <div class="item5"></div>
+            </div>
+        </div>
+        <div class="face">
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+            <div class="face_0">
+                <div class="item6"></div>
+                <div class="item6"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/T1.js"></script>
+</html>

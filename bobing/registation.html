@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>REGISTATION</title>
+    <style>
+        #bg{
+            border-width:0px;
+            position:absolute;
+            left:175px;
+            top:10px;
+            width:1140px;
+            height:700px 100%;
+        }
+
+        #game{
+            border-width:0px;
+            position:absolute;
+            left:615px;
+            top:180px;
+            display:flex;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:35px;
+            line-height:35px;
+            text-align:center;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #login_text{
+            border-width:0px;
+            position:absolute;
+            left:640px;
+            top:390px;
+            display:flex;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:15px;
+            text-align:center;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #login_user{
+            border-width:0px;
+            position:absolute;
+            left:611px;
+            top:430px;
+            display:flex;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:20px;
+            line-height:35px;
+            text-align:center;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #login_password{
+            border-width:0px;
+            position:absolute;
+            left:611px;
+            top:490px;
+            display:flex;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:20px;
+            line-height:35px;
+            text-align:center;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #login_confirm{
+            border-width:0px;
+            position:absolute;
+            left:636px;
+            top:560px;
+            display:flex;
+            position:absolute;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #confirm{
+            width:230px;
+            height:35px;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:20px;
+            background-color:rgb(230, 218, 59)
+        }
+
+        #login_back{
+            border-width:0px;
+            position:absolute;
+            left:200px;
+            top:30px;
+            display:flex;
+            position:absolute;
+            align-self:flex-start;
+            padding:0px 0px 0px 0px;
+            box-sizing:border-box;
+            width:100%;
+            border-width:0px;
+            white-space:nowrap;
+            text-transform:none;
+        }
+
+        #back{
+            width:80px;
+            height:35px;
+            font-family:"Arial Negreta", "Arial Normal", "Arial", sans-serif;
+            font-weight:700;
+            font-style:normal;
+            font-size:20px;
+            background-color:rgb(230, 218, 59)
+        }
+    </style>
+</head>
+
+<body>
+    <img id="bg" src="file:///C:/Users/LSY/Desktop/bobing/E-1131400-2012C1C2.jpg">
+
+    <div id="game">
+        <h1>BOBING</h1>
+    </div>
+
+    <div id="login_text">
+        <p>Please register your account.</p>
+    </div>
+
+    <div id="login_user">
+        Nickname:&nbsp&nbsp<input type="text" id="user" style="background-color:rgb(231, 229, 229)"/><br/> 
+    </div>
+
+    <div id="login_password">
+        Password:&nbsp&nbsp<input type="password" id="pwd" style="background-color:rgb(231, 229, 229)"/>
+    </div>
+
+    <div id="login_confirm">
+        <button type="button" id="confirm">Confirm</button>
+    </div>
+
+    <div id="login_back">
+        <a href="file:///E:/lsyvscode/bobing/account.html">
+            <button type="button" id="back">Back</button>
+        </a>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    var aInputs = document.getElementsByTagName('input');
+    var db = openDatabase('lsy', '1.0', 'user', '1024*1024');
+    db.transaction(function(contex) {
+        contex.executeSql('create table if not exists userinf(id unique,name,password)');
+    });
+    var oBtn = document.getElementById('confirm');
+    var num = 0;
+    oBtn.onclick = function() {
+        if (aInputs[0].value && aInputs[1].value) {
+            db.transaction(function(contex) {
+                contex.executeSql('select * from userinf', [], function(con, data) {
+                    var leg = data.rows.length,
+                        i;
+                    for (var i = 0; i < leg; i++) {
+                        if (aInputs[0].value == data.rows.item(i).name) {
+                            alert('The user name has been registered!');
+                            return;
+                        }
+                    }
+                    num =leg +1;
+                });
+                contex.executeSql('insert into userinf(id,name,password) values("' + num + '","' + aInputs[0].value + '","' + aInputs[1].value + '")');
+                alert('Registration succeeded');
+                window.location.href='file:///E:/lsyvscode/bobing/account.html';
+            });
+        } else {
+            alert('Please fill in the complete account password!');
+        }
+    }
+</script>
+</html>
